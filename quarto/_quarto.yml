@@ -13,7 +13,7 @@ book:
       Ce livre a été écrit avec <a href="https://quarto.org/">Quarto</a>.
   cover-image: https://clessn.com/assets/img/logo-black.svg
   favicon: https://clessn.com/assets/img/logo-black.svg
-  repo-url: https://github.com/clessnverse/clessnverse.github.io
+  repo-url: https://github.com/clessnverse
   repo-branch: main
   repo-actions: [edit, issue]
   chapters:
