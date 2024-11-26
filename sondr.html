@@ -8,7 +8,7 @@
 
 <meta name="author" content="Chaire de leadership en enseignement des sciences sociales numériques (CLESSN)">
 
-<title>Catalogue des procédures - 2&nbsp; Sondr</title>
+<title>Catalogue des procédures - 2&nbsp; Sondr Package Documentation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -84,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sondr.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Sondr</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sondr.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Sondr Package Documentation</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -121,13 +155,13 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Bonjour sur notre site</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Clessnverse</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sondr.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Sondr</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Sondr Package Documentation</span></span></a>
   </div>
 </li>
     </ul>
@@ -136,14 +170,40 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">2.1</span> Overview</a></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation"><span class="header-section-number">2.2</span> Installation</a></li>
+  <li><a href="#core-functionalities" id="toc-core-functionalities" class="nav-link" data-scroll-target="#core-functionalities"><span class="header-section-number">2.3</span> Core Functionalities</a>
+  <ul class="collapse">
+  <li><a href="#analysis-module" id="toc-analysis-module" class="nav-link" data-scroll-target="#analysis-module"><span class="header-section-number">2.3.1</span> Analysis Module</a></li>
+  <li><a href="#cleaning-module" id="toc-cleaning-module" class="nav-link" data-scroll-target="#cleaning-module"><span class="header-section-number">2.3.2</span> Cleaning Module</a></li>
+  <li><a href="#merging-module" id="toc-merging-module" class="nav-link" data-scroll-target="#merging-module"><span class="header-section-number">2.3.3</span> Merging Module</a></li>
+  <li><a href="#weighting-module" id="toc-weighting-module" class="nav-link" data-scroll-target="#weighting-module"><span class="header-section-number">2.3.4</span> Weighting Module</a></li>
+  </ul></li>
+  <li><a href="#included-datasets" id="toc-included-datasets" class="nav-link" data-scroll-target="#included-datasets"><span class="header-section-number">2.4</span> Included Datasets</a>
+  <ul class="collapse">
+  <li><a href="#us-counties-data" id="toc-us-counties-data" class="nav-link" data-scroll-target="#us-counties-data"><span class="header-section-number">2.4.1</span> US Counties Data</a></li>
+  <li><a href="#us-counties-map-data" id="toc-us-counties-map-data" class="nav-link" data-scroll-target="#us-counties-map-data"><span class="header-section-number">2.4.2</span> US Counties Map Data</a></li>
+  </ul></li>
+  <li><a href="#best-practices-and-tips" id="toc-best-practices-and-tips" class="nav-link" data-scroll-target="#best-practices-and-tips"><span class="header-section-number">2.5</span> Best Practices and Tips</a></li>
+  <li><a href="#potential-improvements" id="toc-potential-improvements" class="nav-link" data-scroll-target="#potential-improvements"><span class="header-section-number">2.6</span> Potential Improvements</a></li>
+  <li><a href="#dependencies" id="toc-dependencies" class="nav-link" data-scroll-target="#dependencies"><span class="header-section-number">2.7</span> Dependencies</a></li>
+  <li><a href="#contributing" id="toc-contributing" class="nav-link" data-scroll-target="#contributing"><span class="header-section-number">2.8</span> Contributing</a></li>
+  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license"><span class="header-section-number">2.9</span> License</a></li>
+  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact"><span class="header-section-number">2.10</span> Contact</a></li>
+  <li><a href="#citation" id="toc-citation" class="nav-link" data-scroll-target="#citation"><span class="header-section-number">2.11</span> Citation</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/clessnverse/edit/main/sondr.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/clessnverse/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Sondr</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Sondr Package Documentation</span></h1>
 </div>
 
 
@@ -160,9 +220,232 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Le package sondr sert a sonder.</p>
+<section id="overview" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">2.1</span> Overview</h2>
+<p>This R package provides a comprehensive suite of utilities for data analysis, focusing on survey data processing, statistical analysis, and data visualization. The package is organized into several key modules:</p>
+<ul>
+<li>Analysis (<code>analysis.R</code>)</li>
+<li>Data Cleaning (<code>cleaning.R</code>)</li>
+<li>Data Merging (<code>merging.R</code>)</li>
+<li>Weighting (<code>weighting.R</code>)</li>
+<li>Useful Data (<code>useful_data.R</code>)</li>
+</ul>
+</section>
+<section id="installation" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="installation"><span class="header-section-number">2.2</span> Installation</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install from GitHub (requires devtools)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"your-username/package-name"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="core-functionalities" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="core-functionalities"><span class="header-section-number">2.3</span> Core Functionalities</h2>
+<section id="analysis-module" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="analysis-module"><span class="header-section-number">2.3.1</span> Analysis Module</h3>
+<section id="glimpse_with_table" class="level4" data-number="2.3.1.1">
+<h4 data-number="2.3.1.1" class="anchored" data-anchor-id="glimpse_with_table"><span class="header-section-number">2.3.1.1</span> <code>glimpse_with_table()</code></h4>
+<p>A powerful data frame inspection function that extends <code>dplyr::glimpse()</code> functionality.</p>
+<p><strong>Usage:</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse_with_table</span>(df, <span class="at">n_values =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Arguments:</strong> - <code>df</code>: Data frame to be summarized - <code>n_values</code>: Number of unique values to display (default: 5)</p>
+<p><strong>Features:</strong> - Displays row and column counts - Shows column types - Highlights missing data with color-coded percentages - Presents frequency tables for categorical variables</p>
+<p><strong>Example:</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>), <span class="at">size =</span> <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"D"</span>, <span class="st">"E"</span>, <span class="st">"F"</span>), <span class="at">size =</span> <span class="dv">100</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse_with_table</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="topdown_fa" class="level4" data-number="2.3.1.2">
+<h4 data-number="2.3.1.2" class="anchored" data-anchor-id="topdown_fa"><span class="header-section-number">2.3.1.2</span> <code>topdown_fa()</code></h4>
+<p>Performs top-down factor analysis with visualization.</p>
+<p><strong>Usage:</strong></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">topdown_fa</span>(df, <span class="at">nfactors =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Arguments:</strong> - <code>df</code>: Data frame for factor analysis - <code>nfactors</code>: Number of factors to extract (default: 1)</p>
+<p><strong>Returns:</strong> - ggplot visualization - List containing: - Cronbach’s alpha - First eigenvalue - Factor loadings - Factor analysis plot</p>
+</section>
+<section id="qualtrics_na_counter" class="level4" data-number="2.3.1.3">
+<h4 data-number="2.3.1.3" class="anchored" data-anchor-id="qualtrics_na_counter"><span class="header-section-number">2.3.1.3</span> <code>qualtrics_na_counter()</code></h4>
+<p>Analyzes missing data patterns in Qualtrics survey data.</p>
+<p><strong>Usage:</strong></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qualtrics_na_counter</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Features:</strong> - Handles text columns appropriately - Groups variables by common prefixes - Generates visualizations of missing data patterns - Returns detailed missing data statistics</p>
+</section>
+</section>
+<section id="cleaning-module" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="cleaning-module"><span class="header-section-number">2.3.2</span> Cleaning Module</h3>
+<section id="parse_money_range" class="level4" data-number="2.3.2.1">
+<h4 data-number="2.3.2.1" class="anchored" data-anchor-id="parse_money_range"><span class="header-section-number">2.3.2.1</span> <code>parse_money_range()</code></h4>
+<p>Parses string monetary ranges into numeric vectors.</p>
+<p><strong>Usage:</strong></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">parse_money_range</span>(value, <span class="at">sep =</span> <span class="cn">NULL</span>, <span class="at">limit =</span> <span class="cn">NULL</span>, <span class="at">ceiling_increment =</span> <span class="dv">10000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Arguments:</strong> - <code>value</code>: String containing monetary range - <code>sep</code>: Separator between range values - <code>limit</code>: How to handle unbounded ranges (“floor”/“ceiling”) - <code>ceiling_increment</code>: Value to add for ceiling limits</p>
+<p><strong>Examples:</strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">parse_money_range</span>(<span class="st">"$1,000 to $1,999"</span>, <span class="at">sep =</span> <span class="st">"to"</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">parse_money_range</span>(<span class="st">"under $1,000"</span>, <span class="at">limit =</span> <span class="st">"floor"</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">parse_money_range</span>(<span class="st">"$15,000 or over"</span>, <span class="at">limit =</span> <span class="st">"ceiling"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="clean_likert_numeric_vector" class="level4" data-number="2.3.2.2">
+<h4 data-number="2.3.2.2" class="anchored" data-anchor-id="clean_likert_numeric_vector"><span class="header-section-number">2.3.2.2</span> <code>clean_likert_numeric_vector()</code></h4>
+<p>Normalizes Likert scale responses.</p>
+<p><strong>Usage:</strong></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">clean_likert_numeric_vector</span>(raw_vector)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Features:</strong> - Scales data to 0-1 range - Preserves original response spacing - Handles missing values appropriately</p>
+</section>
+<section id="finverser" class="level4" data-number="2.3.2.3">
+<h4 data-number="2.3.2.3" class="anchored" data-anchor-id="finverser"><span class="header-section-number">2.3.2.3</span> <code>finverser()</code></h4>
+<p>Inverts the order of unique values while preserving spacing.</p>
+<p><strong>Usage:</strong></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">finverser</span>(vec_col)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="min_max_normalization" class="level4" data-number="2.3.2.4">
+<h4 data-number="2.3.2.4" class="anchored" data-anchor-id="min_max_normalization"><span class="header-section-number">2.3.2.4</span> <code>min_max_normalization()</code></h4>
+<p>Performs min-max normalization on numeric vectors.</p>
+<p><strong>Usage:</strong></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">min_max_normalization</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="merging-module" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="merging-module"><span class="header-section-number">2.3.3</span> Merging Module</h3>
+<section id="read_any_csv" class="level4" data-number="2.3.3.1">
+<h4 data-number="2.3.3.1" class="anchored" data-anchor-id="read_any_csv"><span class="header-section-number">2.3.3.1</span> <code>read_any_csv()</code></h4>
+<p>Robust CSV file reader with multiple fallback methods.</p>
+<p><strong>Usage:</strong></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_any_csv</span>(file_path, ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Features:</strong> - Multiple reading attempts with different methods - Handles problematic headers - Supports various delimiters - Error handling and informative messages</p>
+</section>
+<section id="read_survey" class="level4" data-number="2.3.3.2">
+<h4 data-number="2.3.3.2" class="anchored" data-anchor-id="read_survey"><span class="header-section-number">2.3.3.2</span> <code>read_survey()</code></h4>
+<p>Universal survey data reader supporting multiple formats.</p>
+<p><strong>Usage:</strong></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read_survey</span>(file)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Supported formats:</strong> - CSV - XLSX - SPSS (.sav) - RDS</p>
+</section>
+<section id="utility-functions" class="level4" data-number="2.3.3.3">
+<h4 data-number="2.3.3.3" class="anchored" data-anchor-id="utility-functions"><span class="header-section-number">2.3.3.3</span> Utility Functions</h4>
+<ul>
+<li><code>load_variable()</code>: Extracts specific variables from files</li>
+<li><code>generate_survey_ids()</code>: Creates unique survey identifiers</li>
+<li><code>match_and_update()</code>: Updates vectors based on matching names</li>
+<li><code>extract_elements_with_prefix()</code>: Extracts elements with matching prefixes</li>
+</ul>
+</section>
+</section>
+<section id="weighting-module" class="level3" data-number="2.3.4">
+<h3 data-number="2.3.4" class="anchored" data-anchor-id="weighting-module"><span class="header-section-number">2.3.4</span> Weighting Module</h3>
+<section id="stratification_table" class="level4" data-number="2.3.4.1">
+<h4 data-number="2.3.4.1" class="anchored" data-anchor-id="stratification_table"><span class="header-section-number">2.3.4.1</span> <code>stratification_table()</code></h4>
+<p>Creates weighted stratified tables for demographic analysis.</p>
+<p><strong>Usage:</strong></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">stratification_table</span>(data, <span class="at">strata_level =</span> <span class="st">"ses_state"</span>, strata_vars, <span class="at">weight_var =</span> <span class="st">"weight"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+</section>
+<section id="included-datasets" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="included-datasets"><span class="header-section-number">2.4</span> Included Datasets</h2>
+<section id="us-counties-data" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="us-counties-data"><span class="header-section-number">2.4.1</span> US Counties Data</h3>
+<p>Contains county-level information including: - FIPS codes - Population density - Electoral projections</p>
+</section>
+<section id="us-counties-map-data" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="us-counties-map-data"><span class="header-section-number">2.4.2</span> US Counties Map Data</h3>
+<p>Geographic boundary data for US counties: - Longitude/latitude coordinates - FIPS codes - Boundary definitions</p>
+</section>
+</section>
+<section id="best-practices-and-tips" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="best-practices-and-tips"><span class="header-section-number">2.5</span> Best Practices and Tips</h2>
+<ol type="1">
+<li><strong>Data Loading:</strong>
+<ul>
+<li>Use <code>read_survey()</code> as the primary data loading function</li>
+<li>For problematic CSVs, try <code>read_any_csv()</code> with different parameters</li>
+</ul></li>
+<li><strong>Survey Data Processing:</strong>
+<ul>
+<li>Clean Likert scales with <code>clean_likert_numeric_vector()</code></li>
+<li>Handle missing data using <code>qualtrics_na_counter()</code></li>
+<li>Use <code>parse_money_range()</code> for income/monetary data</li>
+</ul></li>
+<li><strong>Analysis Workflow:</strong>
+<ul>
+<li>Start with <code>glimpse_with_table()</code> for data exploration</li>
+<li>Use <code>topdown_fa()</code> for factor analysis</li>
+<li>Apply appropriate normalization functions</li>
+</ul></li>
+<li><strong>Performance Considerations:</strong>
+<ul>
+<li>Large datasets (&gt;1M rows) may require chunked processing</li>
+<li>Consider using data.table for very large datasets</li>
+<li>Use appropriate encoding settings when reading files</li>
+</ul></li>
+</ol>
+</section>
+<section id="potential-improvements" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="potential-improvements"><span class="header-section-number">2.6</span> Potential Improvements</h2>
+<ol type="1">
+<li><strong>Function Enhancements:</strong>
+<ul>
+<li>Add parallel processing support for large datasets</li>
+<li>Implement more robust error handling</li>
+<li>Add support for more file formats</li>
+<li>Enhance visualization options</li>
+</ul></li>
+<li><strong>Documentation:</strong>
+<ul>
+<li>Add more examples</li>
+<li>Create vignettes for common use cases</li>
+<li>Improve function cross-referencing</li>
+</ul></li>
+<li><strong>Testing:</strong>
+<ul>
+<li>Increase test coverage</li>
+<li>Add stress tests for large datasets</li>
+<li>Include more edge cases</li>
+</ul></li>
+<li><strong>New Features:</strong>
+<ul>
+<li>Add support for longitudinal data analysis</li>
+<li>Implement more statistical methods</li>
+<li>Add export functions for various formats</li>
+<li>Create interactive visualizations</li>
+</ul></li>
+</ol>
+</section>
+<section id="dependencies" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="dependencies"><span class="header-section-number">2.7</span> Dependencies</h2>
+<ul>
+<li>dplyr</li>
+<li>ggplot2</li>
+<li>readr</li>
+<li>haven</li>
+<li>readxl</li>
+<li>psych</li>
+<li>stringr</li>
+<li>tidyr</li>
+</ul>
+</section>
+<section id="contributing" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="contributing"><span class="header-section-number">2.8</span> Contributing</h2>
+<p>Contributions are welcome! Please consider:</p>
+<ol type="1">
+<li>Following the existing code style</li>
+<li>Adding tests for new features</li>
+<li>Updating documentation</li>
+<li>Creating detailed pull requests</li>
+</ol>
+</section>
+<section id="license" class="level2" data-number="2.9">
+<h2 data-number="2.9" class="anchored" data-anchor-id="license"><span class="header-section-number">2.9</span> License</h2>
+<p>[Add your license information here]</p>
+</section>
+<section id="contact" class="level2" data-number="2.10">
+<h2 data-number="2.10" class="anchored" data-anchor-id="contact"><span class="header-section-number">2.10</span> Contact</h2>
+<p>[Add your contact information here]</p>
+</section>
+<section id="citation" class="level2" data-number="2.11">
+<h2 data-number="2.11" class="anchored" data-anchor-id="citation"><span class="header-section-number">2.11</span> Citation</h2>
+<p>[Add citation information here]</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -720,8 +1003,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Bonjour sur notre site">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Bonjour sur notre site</span></span>
+      <a href="./index.html" class="pagination-link" aria-label="Clessnverse">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Clessnverse</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -735,7 +1018,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/clessnverse/edit/main/sondr.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/clessnverse/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/clessnverse/edit/main/sondr.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/clessnverse/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Ce livre a été écrit avec <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
