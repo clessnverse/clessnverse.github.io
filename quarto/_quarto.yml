@@ -19,6 +19,7 @@ book:
   chapters:
     - index.qmd
     - sondr.qmd
+    - template_datagotchi_report.qmd
 
 bibliography: references.bib
 csl: https://www.zotero.org/styles/apa
